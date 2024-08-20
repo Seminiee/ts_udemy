@@ -6,7 +6,7 @@ function combine(
     input2: Combinable,//number | string,
     resultConversion: ConversionDescriptor//리터럴 타입
 ) {
-    let result;
+    let result: Combinable;
     if (typeof input1 === "number" && typeof input2 === "number" || resultConversion === 'as-number') {
         result = +input1 + +input2;
     } else {
