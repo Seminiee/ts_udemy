@@ -9,19 +9,31 @@ add = (n1: number, n2: number) => {
 }
 
 interface Named {
-    readonly name?: string;
+    readonly name: string;
     outputName?: string;
+}
+
+interface Aged {
+    age?: number;
 }
 
 interface Greetable extends Named{
     greet(phrase: string): void;
 }
 
-class Person implements Greetable {
-    name?: string;
-    age = 30;
-    constructor(n?: string) {
-        if(n) this.name = n;
+interface Student extends Named, Aged, Greetable {
+    schoolName: string;
+    grade: number;
+    currentClass: string;
+}
+
+class Person implements Greetable, Aged {
+    readonly name: string;
+    age?: number;
+
+    constructor(n: string, age?: number) {
+        this.name = n;
+        if(age) this.age = age;
     }
     greet(phrase: string) {
         if(this.name) {
