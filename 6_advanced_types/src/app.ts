@@ -60,6 +60,19 @@ const storedData = userInput ?? 'DEFAULT';
 
 console.log(storedData);
 
+
+// type AdminAuthority = 'Administrator';
+// type NoAuthority = 'Standard Employee';
+
+// type Auth = AdminAuthority | NoAuthority;
+// function printAuth(auth: Auth) {
+//     console.log(auth);
+// }
+// let myAuth = 'Administrator';
+// const myAuth2 = 'Administrator';
+// printAuth(myAuth);
+// printAuth(myAuth2);
+
 // type UnknownEmployee = Employee | Admin;
 
 // function printEmployeeInformation(emp: UnknownEmployee) {
